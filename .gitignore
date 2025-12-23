@@ -1,16 +1,5 @@
-# Bỏ qua thư mục môi trường ảo
 venv/
-env/
-.env
-
-# Bỏ qua các file rác của Python
 __pycache__/
 *.pyc
-
-# Bỏ qua file hệ thống (nếu dùng Mac/Windows)
 .DS_Store
-Thumbs.db
-
-# (Tùy chọn) Nếu file model .h5 quá nặng (>100MB), GitHub sẽ chặn.
-# Nếu file bilstm.h5 của bạn < 100MB thì KHÔNG cần thêm dòng dưới.
-# *.h5
+**/rf_final.joblib
