@@ -18,8 +18,23 @@ NLP-app/
 │   └── (Chứa 2000 câu văn bản tiếng Việt thô/raw data)
 │
 ├── training/                # HUẤN LUYỆN MÔ HÌNH
-│   ├── (Dữ liệu đã gán nhãn thủ công - Labeled Data)
-│   └── (Source code huấn luyện mô hình .ipynb/.py)
+│   ├── combined_data.json   # File dữ liệu 2099 câu văn bản tiếng việt đã gắn nhãn
+│   ├── DATA TEST POS TAGGING.xlsx #File 120 câu văn bản tiếng việt dùng để test mô hình
+│   ├── POS_TAGGING.ipynb    # Code chính phụ trách việc huấn luyện và chấm điểm mô hình
+│   ├── ket_qua_chi_tiet.txt # Điểm của 4 mô hình ML và 1 mô hình DL sau huấn luyện
+│   ├── TEST_POS_SVM_GOLD.json
+│   └── deployment_resources/# Chứa các file mô hình đã huấn luyện
+│       ├── bilstm.h5        # Model Bi-LSTM
+│       ├── svm_final.joblib # Model SVM
+│       ├── rf_final.joblib  # Model Random Forest (Cần tải thủ công)
+│       ├── label_encoder.joblib 
+│       ├── logreg_final.joblib
+│       ├── max_len.json
+│       ├── nb_final.joblib
+│       ├── phrase_vocab.pkl
+│       ├── tag2idx.json
+│       ├── word2idx.json
+│       └── vec_full.joblib
 │
 ├── application/             # ỨNG DỤNG DEMO (STREAMLIT)
 │   ├── app.py               # File chính để chạy ứng dụng
@@ -28,7 +43,14 @@ NLP-app/
 │       ├── bilstm.h5        # Model Bi-LSTM
 │       ├── svm_final.joblib # Model SVM
 │       ├── rf_final.joblib  # Model Random Forest (Cần tải thủ công)
-│       └── ... (các file vectorizer, dictionary khác)
+│       ├── label_encoder.joblib 
+│       ├── logreg_final.joblib
+│       ├── max_len.json
+│       ├── nb_final.joblib
+│       ├── phrase_vocab.pkl
+│       ├── tag2idx.json
+│       ├── word2idx.json
+│       └── vec_full.joblib
 │
 ├── venv/                    # Môi trường ảo (Không lưu trên Git)
 └── README.md                # Hướng dẫn sử dụng
